@@ -33,7 +33,7 @@ app.post('/post/:id/comments',async(req,res)=>{
 })
 
 app.post('/events',(req,res)=>{
-   console.log('event triggerd from comment' , req.body.type);
+   console.log('event triggerd from comment' , req.body);
 })
 
 const port = process.env.PORT || 5001;

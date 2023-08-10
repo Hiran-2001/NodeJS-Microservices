@@ -21,7 +21,7 @@ app.post('/post',async (req,res)=>{
 
   await axios.post('http://localhost:5005/events',{
     type:'postCreated',
-    data:{
+    data:{ 
         id,title
     }
    })
@@ -29,7 +29,7 @@ app.post('/post',async (req,res)=>{
 })
 
 app.post('/events',(req,res)=>{
-    console.log('received events from post', req.body.type);
+    console.log('received events from post', req.body);
 
     res.send({})
 })
