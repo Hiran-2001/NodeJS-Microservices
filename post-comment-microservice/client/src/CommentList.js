@@ -4,7 +4,18 @@ import React from "react";
 function CommentList({ comments }) {
 
   const renderComments = comments.map(comment=>{
-    return <li key={comment.id}>{comment.comment}</li>
+
+    let approvedComment ;
+    if(comment.status === "Approved"){
+      approvedComment = comment.comment
+    }
+    if(comment.status === 'pending'){
+      approvedComment = "Moderating";
+    }
+    if(comment.status === "Rejected"){
+      approvedComment = `comment ${comment.status}`
+    }
+    return <li key={comment.id}>{approvedComment}</li>
   })
   return <div>
     {renderComments}
