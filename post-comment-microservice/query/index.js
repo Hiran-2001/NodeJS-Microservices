@@ -37,6 +37,7 @@ const handleEvent =(type,data)=>{
     }
 }
 
+
 app.get('/posts', (req, res) => {
     res.send(posts)
 });
@@ -51,6 +52,8 @@ app.post('/events', (req, res) => {
    
     res.send({})
 });
+
+// in req.body we ill get data from event.
 
 app.listen(5002, async() => {
     console.log('query Service is running in post 5002');
