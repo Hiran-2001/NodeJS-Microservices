@@ -23,7 +23,7 @@ app.post('/events', async (req, res) => {
         })
     }
 
-    res.send({})
+    res.send({})  
 })
 
 app.listen(5003, () => {
