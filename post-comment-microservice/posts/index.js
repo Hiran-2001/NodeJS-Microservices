@@ -46,4 +46,8 @@ app.post('/events',(req,res)=>{   //localhost:5000/events
 
 //  here we ll get the response from event bus.
 
-app.listen(port, () => console.log(`Post service is running on port ${port} 🔥`));
+app.listen(port, () =>{
+    console.log("new deployment update in another way");
+    console.log(`Post service is running on port ${port} 🔥`)
+})
+    
